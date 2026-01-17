@@ -12,13 +12,36 @@ import Day2 from './pages/Day2';
 import { Page } from './types';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  // Helper to get page from hash
+  const getPageFromHash = (): Page => {
+    const hash = window.location.hash.replace('#/', '');
+    const validPages: Page[] = ['home', 'tracks', 'schedule', 'about', 'register', 'day1', 'day2'];
+    return validPages.includes(hash as Page) ? (hash as Page) : 'home';
+  };
+
+  const [currentPage, setCurrentPage] = useState<Page>(getPageFromHash);
   const [scheduleDay, setScheduleDay] = useState<'day1' | 'day2'>('day1');
   const [registerSelection, setRegisterSelection] = useState<'day1' | 'day2' | 'both'>('both');
+
+  // Handle browser back/forward buttons
+  React.useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPage(getPageFromHash());
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   const handleNavigate = (page: Page, day?: 'day1' | 'day2', regDay?: 'day1' | 'day2' | 'both') => {
     if (day) setScheduleDay(day);
     if (regDay) setRegisterSelection(regDay);
+
+    // Only push if different from current hash to avoid duplicate entries
+    if (window.location.hash !== `#/${page}`) {
+      window.history.pushState({}, '', `#/${page}`);
+    }
+
     setCurrentPage(page);
     window.scrollTo(0, 0);
   };
@@ -42,7 +65,7 @@ const App: React.FC = () => {
       <main className="min-h-[calc(100vh-80px)]">
         {renderPage()}
       </main>
-      <Footer onNavigate={setCurrentPage} />
+      <Footer onNavigate={(page) => handleNavigate(page)} />
     </div>
   );
 };

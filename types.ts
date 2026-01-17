@@ -6,6 +6,7 @@ export interface Track {
   title: string;
   description: string;
   icon: string;
+  color?: string;
   prize?: string;
 }
 

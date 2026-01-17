@@ -1,6 +1,6 @@
 import React from 'react';
 import { Page } from '../types';
-import heroBg from '../assets/hero-bg.png';
+import heroBg from '../assets/hero-bg-v2.png';
 
 interface HomeProps {
   onNavigate: (page: Page, day?: 'day1' | 'day2', regDay?: 'day1' | 'day2' | 'both') => void;
@@ -32,7 +32,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
               <p className="text-base sm:text-xl text-text-muted max-w-lg leading-relaxed font-medium">
                 Challenge the Status Quo. Build for Good.<br />
-                <span className="text-white">January 24 & 25, 2026</span> • Commune - Work Near Home, Kottarakkara
+                <span className="text-white block mt-2 font-bold mb-1">January 24 & 25, 2026</span>
+                <span className="text-white/60">Commune - Work Near Home, Kottarakkara</span>
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
@@ -51,18 +52,18 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 </button>
               </div>
 
-              <div className="grid grid-cols-3 gap-8 pt-10 border-t border-white/5 mt-6">
+              <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 sm:pt-10 border-t border-white/5 mt-6">
                 <div>
-                  <p className="text-2xl sm:text-4xl font-black text-white font-display">₹50K+</p>
-                  <p className="text-[10px] font-black text-text-muted uppercase tracking-widest mt-1">Prize Pool</p>
+                  <p className="text-xl sm:text-4xl font-black text-white font-display">₹20K+</p>
+                  <p className="text-[9px] sm:text-[10px] font-black text-text-muted uppercase tracking-widest mt-1">Prize Pool</p>
                 </div>
                 <div>
-                  <p className="text-2xl sm:text-4xl font-black text-white font-display">2</p>
-                  <p className="text-[10px] font-black text-text-muted uppercase tracking-widest mt-1">Tracks</p>
+                  <p className="text-xl sm:text-4xl font-black text-white font-display">2</p>
+                  <p className="text-[9px] sm:text-[10px] font-black text-text-muted uppercase tracking-widest mt-1">Tracks</p>
                 </div>
                 <div>
-                  <p className="text-2xl sm:text-4xl font-black text-white font-display">24H</p>
-                  <p className="text-[10px] font-black text-text-muted uppercase tracking-widest mt-1">Duration</p>
+                  <p className="text-xl sm:text-4xl font-black text-white font-display">2</p>
+                  <p className="text-[9px] sm:text-[10px] font-black text-text-muted uppercase tracking-widest mt-1">Days</p>
                 </div>
               </div>
             </div>
@@ -106,7 +107,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="mx-auto max-w-7xl flex flex-col gap-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="flex flex-col gap-4 max-w-2xl">
-              <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tighter font-display uppercase leading-[0.9]">MISSION <br /><span className="text-primary">TRACKS</span></h2>
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tighter font-display uppercase leading-[0.9]">MISSION <br /><span className="text-primary">TRACKS</span></h2>
               <p className="text-text-muted text-lg font-medium leading-relaxed">We don't do toy apps. Choose a track and build a solution that solves a real human problem.</p>
             </div>
             <button
@@ -120,8 +121,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { title: 'Civic Growth', desc: 'Streamline governance and improve public service delivery.', icon: 'apartment' },
-              { title: 'Neural Networks', desc: 'Leverage Neural Networks and Machine Learning to build predictive models.', icon: 'neurology' },
+              { title: 'Local Governance & Community', desc: 'Streamline governance and improve public service delivery.', icon: 'apartment' },
+              { title: 'AI & Data Innovation', desc: 'Leverage Neural Networks and Machine Learning to build predictive models.', icon: 'neurology' },
             ].map((item, idx) => (
               <div key={idx} className="group p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-primary/50 transition-all hover:bg-white/10">
                 <span className="material-symbols-outlined text-4xl text-primary mb-6">{item.icon}</span>

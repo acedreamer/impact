@@ -8,20 +8,20 @@ interface Day1Props {
 const Day1: React.FC<Day1Props> = ({ onNavigate }) => {
     return (
         <div className="theme-day-1 min-h-screen bg-background-dark text-white">
-            <div className="py-12 sm:py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+            <div className="py-12 sm:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
                 {/* Hero Section */}
                 <div className="relative mb-20">
                     <div className="absolute -top-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none"></div>
 
                     <div className="relative z-10 space-y-6">
                         <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
-                            Day 01 • Local Self Government
+                            Day 01 • Local Governance & Community
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-black font-display tracking-tight uppercase">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display tracking-tight uppercase">
                             Rebuilding <br />
                             <span className="text-primary transparent-text-stroke">Bureaucracy</span>
                         </h1>
-                        <p className="text-xl text-text-muted max-w-2xl font-light leading-relaxed">
+                        <p className="text-lg sm:text-xl text-text-muted max-w-2xl font-light leading-relaxed">
                             Analyze, dismantle, and reconstruct local governance systems.
                             We are hacking the public sector to improve service delivery for Kottarakkara.
                         </p>

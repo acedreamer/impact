@@ -14,7 +14,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
     },
     {
       q: 'Is there a registration fee?',
-      a: 'No, Impact Hackathon is completely free for all admitted participants. We believe in open access to innovation. We will provide meals, snacks, drinks, and swag throughout the event.'
+      a: 'No, Impact Hackathon is completely free for all admitted participants. We believe in open access to innovation. We will provide meals and swag throughout the event.'
     },
     {
       q: 'Will hardware be provided?',
@@ -41,7 +41,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
         <div className="flex flex-col justify-center h-full gap-8 max-w-lg mx-auto lg:mx-0">
           <div className="space-y-6">
             <div className="w-12 h-1 bg-primary mb-6"></div>
-            <h1 className="text-5xl sm:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tighter uppercase text-white font-display">
+            <h1 className="text-4xl sm:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tighter uppercase text-white font-display">
               ABOUT<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">IMPACT</span>
             </h1>
@@ -60,18 +60,18 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             </button>
           </div>
 
-          <div className="mt-12 lg:mt-auto pt-10 flex flex-wrap gap-8 sm:gap-16 border-t border-white/5">
+          <div className="mt-12 lg:mt-auto pt-10 flex flex-wrap gap-6 sm:gap-16 border-t border-white/5">
             <div>
-              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">16h</p>
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hacking</p>
+              <p className="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">16h</p>
+              <p className="text-[9px] sm:text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hacking</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">₹50K+</p>
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Prizes</p>
+              <p className="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">₹20K+</p>
+              <p className="text-[9px] sm:text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Prizes</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">100+</p>
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hackers</p>
+              <p className="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">100+</p>
+              <p className="text-[9px] sm:text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hackers</p>
             </div>
           </div>
         </div>

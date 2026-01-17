@@ -181,7 +181,7 @@ const Schedule: React.FC<ScheduleProps> = ({ initialDay = 'day1' }) => {
               </span>
               <span className="text-text-muted text-[10px] sm:text-sm font-mono">UTC-5</span>
             </div>
-            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white font-display">
+            <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight text-white font-display">
               {activeDay === 'day1' ? 'Day 1: Civic' : 'Day 2: AI'}
             </h2>
             <p className="text-text-muted text-base sm:text-lg max-w-lg font-body">

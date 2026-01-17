@@ -8,20 +8,20 @@ interface Day2Props {
 const Day2: React.FC<Day2Props> = ({ onNavigate }) => {
     return (
         <div className="theme-day-2 min-h-screen bg-background-dark text-white">
-            <div className="py-12 sm:py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+            <div className="py-12 sm:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
                 {/* Hero Section */}
                 <div className="relative mb-20">
                     <div className="absolute -top-20 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none"></div>
 
                     <div className="relative z-10 space-y-6 text-right">
                         <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
-                            Day 02 • AI-Based Problems
+                            Day 02 • AI & Data Innovation
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-black font-display tracking-tight uppercase">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-display tracking-tight uppercase">
                             Architecting <br />
                             <span className="text-primary transparent-text-stroke">Intelligence</span>
                         </h1>
-                        <p className="text-xl text-text-muted max-w-2xl ml-auto font-light leading-relaxed">
+                        <p className="text-lg sm:text-xl text-text-muted max-w-2xl ml-auto font-light leading-relaxed">
                             Push the boundaries of what's possible with Neural Networks and Generative AI.
                             Day 2 is about pure innovation and futuristic agents.
                         </p>

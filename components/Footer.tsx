@@ -10,12 +10,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="w-full border-t border-white/5 bg-background-dark py-12 px-6">
       <div className="mx-auto max-w-7xl flex flex-col items-center gap-8">
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={() => onNavigate('home')}
-        >
-          <span className="material-symbols-outlined text-primary text-2xl font-bold">bolt</span>
-          <span className="text-xl font-bold tracking-tighter text-white font-display">IMPACT</span>
+        <div className="flex items-center gap-2 mb-6 group cursor-pointer" onClick={() => onNavigate('home')}>
+          <span className="material-symbols-outlined text-2xl text-primary group-hover:rotate-12 transition-transform">bolt</span>
+          <span className="text-lg font-black tracking-tighter text-white font-display uppercase group-hover:text-primary transition-colors">IMPACT HACKATHON</span>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">

@@ -7,12 +7,24 @@ interface TracksProps {
 
 const Tracks: React.FC<TracksProps> = ({ onNavigate }) => {
   const tracks: Track[] = [
-    { id: '01', title: 'Civic Growth', icon: 'apartment', description: 'Streamline governance and improve public service delivery. Solve real-world bureaucratic bottlenecks in the Kottarakkara region.' },
-    { id: '02', title: 'Neural Networks', icon: 'neurology', description: 'Leverage Neural Networks and Machine Learning to build predictive models and intelligent agents.' },
+    {
+      id: 'day1',
+      title: 'Local Governance & Community',
+      description: 'Rebuild local bureaucracy. Focus on traffic, waste management, and public service delivery.',
+      icon: 'apartment',
+      color: 'var(--color-primary)'
+    },
+    {
+      id: 'day2',
+      title: 'AI & Data Innovation',
+      description: 'Architect the future. Build autonomous agents and predictive models for complex systems.',
+      icon: 'neurology',
+      color: '#00f0ff'
+    }
   ];
 
   return (
-    <div className="py-12 sm:py-24 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col items-center">
+    <div className="py-12 sm:py-24 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto flex flex-col items-center">
       <div className="w-full space-y-12 sm:space-y-20">
         {/* Header */}
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between border-b border-white/5 pb-12">
@@ -32,8 +44,8 @@ const Tracks: React.FC<TracksProps> = ({ onNavigate }) => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {tracks.map((track) => (
-            <div key={track.id} className={`theme-day-${track.id === '01' ? '1' : '2'} group relative flex flex-col justify-between rounded-[2rem] border border-white/5 bg-surface-dark/20 p-8 sm:p-10 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:bg-surface-dark/50 hover:shadow-[0_30px_60px_-15px_rgb(var(--color-primary)/0.3)]`}>
+          {tracks.map((track, idx) => (
+            <div key={track.id} className={`theme-day-${track.id === 'day1' ? '1' : '2'} group relative flex flex-col justify-between rounded-[2rem] border border-white/5 bg-surface-dark/20 p-6 sm:p-10 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:bg-surface-dark/50 hover:shadow-[0_30px_60px_-15px_rgb(var(--color-primary)/0.3)]`}>
               <div>
                 <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300 group-hover:scale-110">
                   <span className="material-symbols-outlined text-[36px]">{track.icon}</span>
@@ -44,9 +56,9 @@ const Tracks: React.FC<TracksProps> = ({ onNavigate }) => {
                 </p>
               </div>
               <div className="mt-10 flex items-center justify-between border-t border-white/5 pt-6">
-                <span className="text-[11px] font-black text-white/20 uppercase tracking-[0.2em] font-mono">Track {track.id}</span>
+                <span className="text-[11px] font-black text-white/20 uppercase tracking-[0.2em] font-mono">Track 0{idx + 1}</span>
                 <button
-                  onClick={() => onNavigate(track.id === '01' ? 'day1' : 'day2')}
+                  onClick={() => onNavigate(track.id as 'day1' | 'day2')}
                   className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-white group-hover:text-primary transition-colors"
                 >
                   Details

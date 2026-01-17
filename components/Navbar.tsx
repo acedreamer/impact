@@ -48,11 +48,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
         <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
           {/* Logo */}
           <div
-            className="flex items-center gap-2 cursor-pointer group"
+            className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <span className="material-symbols-outlined text-primary text-2xl sm:text-3xl font-bold">bolt</span>
-            <span className="text-lg sm:text-xl font-bold tracking-tighter text-white font-display uppercase">IMPACT</span>
+            <span className="material-symbols-outlined text-3xl text-primary group-hover:rotate-12 transition-transform duration-300">bolt</span>
+            <span className="text-xl font-black tracking-tighter text-white font-display uppercase group-hover:text-primary transition-colors">IMPACT HACKATHON</span>
           </div>
 
           {/* Desktop Nav */}
@@ -107,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <div className="flex h-16 items-center justify-between px-6 border-b border-white/5">
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-primary text-2xl font-bold">bolt</span>
-              <span className="text-lg font-bold tracking-tighter text-white font-display uppercase">IMPACT</span>
+              <span className="text-base font-bold tracking-tighter text-white font-display uppercase">IMPACT HACKATHON</span>
             </div>
             <button
               onClick={() => setIsMenuOpen(false)}

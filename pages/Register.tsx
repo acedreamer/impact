@@ -32,7 +32,7 @@ const Register: React.FC<RegisterProps> = ({ initialSelection = 'both' }) => {
             </p>
           </div>
 
-          <form className="space-y-4 sm:space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <div className="space-y-6">
             <div className="space-y-1.5 sm:space-y-2">
               <label className="text-white/60 text-[11px] font-bold uppercase tracking-widest px-1">Select Participation</label>
               <div className="grid grid-cols-3 gap-2">
@@ -56,57 +56,41 @@ const Register: React.FC<RegisterProps> = ({ initialSelection = 'both' }) => {
               </div>
             </div>
 
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="text-white/60 text-[11px] font-bold uppercase tracking-widest px-1">Full Name</label>
-              <div className="relative group">
-                <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-primary transition-colors text-xl">person</span>
-                <input
-                  type="text"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl h-12 sm:h-14 pl-12 pr-4 text-white text-sm sm:text-base placeholder:text-white/10 focus:border-primary focus:ring-1 focus:ring-primary/20 focus:outline-none transition-all"
-                  placeholder="e.g. Satoshi Nakamoto"
-                />
-              </div>
+            {/* Feature highlights */}
+            <div className="grid grid-cols-2 gap-3 py-4">
+              {[
+                { icon: 'trophy', text: '₹20K+ Prizes' },
+                { icon: 'groups', text: 'Team Size: 1-5' },
+                { icon: 'calendar_month', text: 'Jan 24 & 25' },
+                { icon: 'location_on', text: 'Kottarakkara' },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-2 text-white/60">
+                  <span className="material-symbols-outlined text-primary text-lg">{item.icon}</span>
+                  <span className="text-xs font-medium">{item.text}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="text-white/60 text-[11px] font-bold uppercase tracking-widest px-1">Email Address</label>
-              <div className="relative group">
-                <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-primary transition-colors text-xl">mail</span>
-                <input
-                  type="email"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl h-12 sm:h-14 pl-12 pr-4 text-white text-sm sm:text-base placeholder:text-white/10 focus:border-primary focus:ring-1 focus:ring-primary/20 focus:outline-none transition-all"
-                  placeholder="contact@impact.io"
-                />
-              </div>
-            </div>
-
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="text-white/60 text-[11px] font-bold uppercase tracking-widest px-1">Team Name (Optional)</label>
-              <div className="relative group">
-                <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-primary transition-colors text-xl">groups</span>
-                <input
-                  type="text"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl h-12 sm:h-14 pl-12 pr-4 text-white text-sm sm:text-base placeholder:text-white/10 focus:border-primary focus:ring-1 focus:ring-primary/20 focus:outline-none transition-all"
-                  placeholder="Impact Crew"
-                />
-              </div>
-            </div>
-
-            <div className="pt-4 sm:pt-6">
-              <button
-                type="submit"
+            <div className="pt-2">
+              <a
+                href={
+                  selectedDay === 'day1'
+                    ? 'https://docs.google.com/forms/d/e/1FAIpQLScGdY5YQaMvaKlbku8yvmE1byIe6AQziy34JdSb4JJOiEU92w/viewform?usp=pp_url&entry.1234567890=Theme+1'
+                    : 'https://docs.google.com/forms/d/e/1FAIpQLScGdY5YQaMvaKlbku8yvmE1byIe6AQziy34JdSb4JJOiEU92w/viewform?usp=pp_url&entry.1234567890=Theme+2'
+                }
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full bg-primary hover:bg-[#d9ff33] active:scale-[0.98] text-background-dark text-base sm:text-lg font-black h-12 sm:h-14 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2 group font-display uppercase tracking-wider"
               >
                 Register Now
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </button>
+              </a>
             </div>
 
-            <p className="text-center text-text-muted text-[10px] sm:text-xs font-medium pt-2">
-              By registering, you agree to our
-              <a href="#" className="text-white/60 hover:text-primary underline underline-offset-4 ml-1">Terms of Participation</a>.
+            <p className="text-center text-text-muted text-[10px] sm:text-xs font-medium">
+              You'll be redirected to our secure Google Form to complete registration.
             </p>
-          </form>
+          </div>
         </div>
 
         {/* Bottom indicator */}
@@ -124,7 +108,7 @@ const Register: React.FC<RegisterProps> = ({ initialSelection = 'both' }) => {
       {/* Stats Section - Desktop only */}
       <div className="hidden md:flex w-full justify-center gap-12 lg:gap-20 px-10 mt-12 mb-6 z-10">
         {[
-          { v: '₹50k+', l: 'Prize Pool' },
+          { v: '₹20k+', l: 'Prize Pool' },
           { v: '2 Days', l: 'Duration' },
           { v: 'Offline', l: 'Format' },
           { v: 'Local', l: 'Impact' },
