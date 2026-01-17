@@ -1,0 +1,58 @@
+
+import React from 'react';
+import { Track } from '../types';
+
+const Tracks: React.FC = () => {
+  const tracks: Track[] = [
+    { id: '01', title: 'Civic Growth', icon: 'apartment', description: 'Streamline governance and improve public service delivery. Solve real-world bureaucratic bottlenecks in the Kottarakkara region.' },
+    { id: '02', title: 'Neural Networks', icon: 'neurology', description: 'Leverage Neural Networks and Machine Learning to build predictive models and intelligent agents.' },
+  ];
+
+  return (
+    <div className="py-12 sm:py-24 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col items-center">
+      <div className="w-full space-y-12 sm:space-y-20">
+        {/* Header */}
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between border-b border-white/5 pb-12">
+          <div className="max-w-3xl space-y-6">
+            <h1 className="text-[clamp(3rem,8vw,6rem)] font-black leading-[0.9] tracking-tighter text-white font-display uppercase">
+              Choose Your <br /><span className="text-primary italic">Impact</span>
+            </h1>
+            <p className="text-lg sm:text-xl font-medium text-text-muted leading-relaxed max-w-2xl">
+              Solve real-world problems. Select a track to view specific problem statements.
+            </p>
+          </div>
+          <div className="flex flex-col items-start lg:items-end gap-2">
+            <span className="text-xs font-black text-white/30 uppercase tracking-[0.3em] font-mono">Official Selection</span>
+            <span className="text-sm font-black text-primary uppercase tracking-widest border border-primary/20 bg-primary/5 px-4 py-1.5 rounded-full">Jan 2026</span>
+          </div>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {tracks.map((track) => (
+            <div key={track.id} className="group relative flex flex-col justify-between rounded-[2rem] border border-white/5 bg-surface-dark/20 p-8 sm:p-10 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:bg-surface-dark/50 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)]">
+              <div>
+                <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300 group-hover:scale-110">
+                  <span className="material-symbols-outlined text-[36px]">{track.icon}</span>
+                </div>
+                <h3 className="mb-4 text-2xl sm:text-3xl font-black text-white group-hover:text-primary transition-colors font-display uppercase tracking-tight">{track.title}</h3>
+                <p className="text-base sm:text-lg font-medium text-text-muted leading-relaxed">
+                  {track.description}
+                </p>
+              </div>
+              <div className="mt-10 flex items-center justify-between border-t border-white/5 pt-6">
+                <span className="text-[11px] font-black text-white/20 uppercase tracking-[0.2em] font-mono">Track {track.id}</span>
+                <button className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-white group-hover:text-primary transition-colors">
+                  Details
+                  <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Tracks;
