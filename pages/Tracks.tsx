@@ -55,15 +55,8 @@ const Tracks: React.FC<TracksProps> = ({ onNavigate }) => {
                   {track.description}
                 </p>
               </div>
-              <div className="mt-10 flex items-center justify-between border-t border-white/5 pt-6">
+              <div className="mt-10 flex items-center justify-start border-t border-white/5 pt-6">
                 <span className="text-[11px] font-black text-white/20 uppercase tracking-[0.2em] font-mono">Track 0{idx + 1}</span>
-                <button
-                  onClick={() => onNavigate(track.id as 'day1' | 'day2')}
-                  className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-white group-hover:text-primary transition-colors"
-                >
-                  Details
-                  <span className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
-                </button>
               </div>
             </div>
           ))}
