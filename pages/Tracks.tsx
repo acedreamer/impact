@@ -45,7 +45,7 @@ const Tracks: React.FC<TracksProps> = ({ onNavigate }) => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {tracks.map((track, idx) => (
-            <div key={track.id} className={`theme-day-${track.id === 'day1' ? '1' : '2'} group relative flex flex-col justify-between rounded-[2rem] border border-white/5 bg-surface-dark/20 p-6 sm:p-10 backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:bg-surface-dark/50 hover:shadow-[0_30px_60px_-15px_rgb(var(--color-primary)/0.3)]`}>
+            <div key={track.id} className={`theme-day-${track.id === 'day1' ? '1' : '2'} group relative flex flex-col justify-between rounded-[2rem] border border-white/5 bg-surface-dark/20 p-6 sm:p-10 backdrop-blur-[4px] transition-transform duration-300 hover:-translate-y-2 hover:border-primary/40 hover:bg-surface-dark/50 hover:shadow-[0_20px_40px_-15px_rgb(var(--color-primary)/0.3)] gpu-accelerate`}>
               <div>
                 <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 text-primary group-hover:bg-primary group-hover:text-background-dark transition-all duration-300 group-hover:scale-110">
                   <span className="material-symbols-outlined text-[36px]">{track.icon}</span>

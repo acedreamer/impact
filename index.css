@@ -21,7 +21,10 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/[0.03] border border-white/[0.08] backdrop-blur-[12px];
+    @apply bg-white/[0.03] border border-white/[0.08] backdrop-blur-[8px];
+    /* GPU Optimization: Reduce blur + trigger GPU layer */
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
   }
 }
 
@@ -49,4 +52,16 @@ h5,
 h6,
 .font-display {
   font-family: 'Space Grotesk', sans-serif;
+}
+
+/* GPU Performance Optimizations */
+.gpu-accelerate {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Containment for isolated sections */
+section {
+  contain: layout style paint;
 }

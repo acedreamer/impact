@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
   return (
     <>
-      <header className="sticky top-0 z-[100] w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-[100] w-full border-b border-white/5 bg-background-dark/90 backdrop-blur-sm gpu-accelerate">
         <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
           {/* Logo */}
           <div
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
       <div className="md:hidden">
         {/* Backdrop overlay */}
         <div
-          className={`fixed inset-0 z-[150] bg-black/80 backdrop-blur-sm transition-opacity duration-500 ease-out ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          className={`fixed inset-0 z-[150] bg-black/80 backdrop-blur-[2px] transition-opacity duration-500 ease-out ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           onClick={() => setIsMenuOpen(false)}
         />
