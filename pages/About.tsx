@@ -62,7 +62,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
 
           <div className="mt-12 lg:mt-auto pt-10 flex flex-wrap gap-6 sm:gap-16 border-t border-white/5">
             <div>
-              <p className="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">16h</p>
+              <p className="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">2 Days</p>
               <p className="text-[9px] sm:text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hacking</p>
             </div>
             <div>

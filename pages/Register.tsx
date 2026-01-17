@@ -60,7 +60,7 @@ const Register: React.FC<RegisterProps> = ({ initialSelection = 'both' }) => {
             <div className="grid grid-cols-2 gap-3 py-4">
               {[
                 { icon: 'trophy', text: '₹20K+ Prizes' },
-                { icon: 'groups', text: 'Team Size: 1-5' },
+                { icon: 'groups', text: 'Team Size: 1-4' },
                 { icon: 'calendar_month', text: 'Jan 24 & 25' },
                 { icon: 'location_on', text: 'Kottarakkara' },
               ].map((item) => (
