@@ -12,11 +12,11 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] flex items-center justify-center py-20 px-6 overflow-hidden bg-background-dark">
         {/* Cinematic Lighting */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 blur-[150px] rounded-full -mr-64 -mt-64 pointer-events-none opacity-40"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/[0.02] blur-[120px] rounded-full -ml-32 -mb-32 pointer-events-none opacity-40"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 blur-[80px] rounded-full -mr-64 -mt-64 pointer-events-none opacity-40"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-white/[0.02] blur-[60px] rounded-full -ml-32 -mb-32 pointer-events-none opacity-40"></div>
 
         {/* Center Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 blur-[50px] rounded-full pointer-events-none"></div>
 
         <div className="mx-auto max-w-5xl relative z-10 flex flex-col items-center text-center">
 

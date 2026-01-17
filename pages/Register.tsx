@@ -21,7 +21,7 @@ const Register: React.FC<RegisterProps> = ({ initialSelection = 'both' }) => {
           backgroundSize: "30px 30px"
         }}
       ></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square bg-primary/5 rounded-full blur-[50px] pointer-events-none"></div>
 
       <div className="w-full max-w-[500px] z-10">
         <div className="glass-card rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl">
