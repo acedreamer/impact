@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: 204 255 0;
+    /* Default Lime #ccff00 */
+  }
+
+  .theme-day-1 {
+    --color-primary: 255 170 0;
+    /* Amber/Orange for Civic/Local #ffaa00 */
+  }
+
+  .theme-day-2 {
+    --color-primary: 0 229 255;
+    /* Cyan/Electric Blue for AI #00e5ff */
+  }
+}
+
 @layer components {
   .glass-card {
     @apply bg-white/[0.03] border border-white/[0.08] backdrop-blur-[12px];
@@ -10,8 +27,10 @@
 
 /* Custom scrollbar hiding utility */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -22,6 +41,12 @@ body {
   @apply bg-background-dark text-white font-body;
 }
 
-h1, h2, h3, h4, h5, h6, .font-display {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
   font-family: 'Space Grotesk', sans-serif;
 }

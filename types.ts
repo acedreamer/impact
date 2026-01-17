@@ -1,5 +1,5 @@
 
-export type Page = 'home' | 'tracks' | 'schedule' | 'about' | 'register';
+export type Page = 'home' | 'tracks' | 'schedule' | 'about' | 'register' | 'day1' | 'day2';
 
 export interface Track {
   id: string;

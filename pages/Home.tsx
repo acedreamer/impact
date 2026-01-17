@@ -1,8 +1,9 @@
 import React from 'react';
 import { Page } from '../types';
+import heroBg from '../assets/hero-bg.png';
 
 interface HomeProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, day?: 'day1' | 'day2', regDay?: 'day1' | 'day2' | 'both') => void;
 }
 
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
@@ -70,7 +71,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="relative w-full aspect-[4/5] lg:h-[650px] rounded-[3rem] overflow-hidden group shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] border border-white/10">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80')" }}
+                style={{ backgroundImage: `url(${heroBg})` }}
               ></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
 
@@ -98,10 +99,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Featured Tracks Section */}
-      <section className="w-full bg-surface-dark py-24 sm:py-32 px-6 border-y border-white/5 relative">
+      < section className="w-full bg-surface-dark py-24 sm:py-32 px-6 border-y border-white/5 relative" >
         <div className="mx-auto max-w-7xl flex flex-col gap-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="flex flex-col gap-4 max-w-2xl">
@@ -130,8 +131,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 };
 

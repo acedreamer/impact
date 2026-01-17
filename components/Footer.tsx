@@ -3,7 +3,7 @@ import React from 'react';
 import { Page } from '../types';
 
 interface FooterProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, day?: 'day1' | 'day2', regDay?: 'day1' | 'day2' | 'both') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {

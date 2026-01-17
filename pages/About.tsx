@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Page } from '../types';
 
 interface AboutProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page, day?: 'day1' | 'day2', regDay?: 'day1' | 'day2' | 'both') => void;
 }
 
 const About: React.FC<AboutProps> = ({ onNavigate }) => {
@@ -30,7 +30,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
     },
     {
       q: 'Can I participate remotely?',
-      a: 'This year is hybrid. Core events are in San Francisco, but we have a dedicated remote track with dedicated mentorship via Discord.'
+      a: 'This year our event is offline at Commune - Work Near Home, Kottarakkara. We also have a dedicated remote track.'
     }
   ];
 
@@ -46,7 +46,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">IMPACT</span>
             </h1>
             <p className="text-text-muted text-lg sm:text-xl font-medium leading-relaxed mt-6">
-              A 48-hour global marathon to solve the world's most pressing challenges. We unite developers, designers, and visionaries to code for a better future.
+              A 2-day regional innovation sprint to solve Kottarakkara's most pressing challenges. We unite developers, designers, and visionaries to code for a better future.
             </p>
           </div>
 
@@ -58,23 +58,19 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
               Register Now
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </button>
-            <button className="border border-white/20 hover:border-white text-white font-bold text-base h-14 px-8 rounded-xl flex items-center justify-center gap-2 transition-all hover:bg-white/5">
-              <span className="material-symbols-outlined">play_circle</span>
-              Watch Recap
-            </button>
           </div>
 
           <div className="mt-12 lg:mt-auto pt-10 flex flex-wrap gap-8 sm:gap-16 border-t border-white/5">
             <div>
-              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">24h</p>
-              <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Duration</p>
+              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">16h</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hacking</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">₹50k+</p>
+              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">₹50K+</p>
               <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Prizes</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">500+</p>
+              <p className="text-3xl font-black text-white font-display uppercase tracking-tight">100+</p>
               <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 font-black">Hackers</p>
             </div>
           </div>
@@ -92,7 +88,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             </div>
             <div className="space-y-6 text-text-muted text-lg leading-relaxed font-medium">
               <p>Impact Hackathon is not just another coding competition. It's a high-stakes environment where the brightest minds tackle complex problems with direct human impact.</p>
-              <p>Over the course of 48 hours, you'll have access to top-tier mentors from industry leaders like Google, OpenAI, and Sequoia, as well as specialized hardware and compute resources to bring your vision to life.</p>
+              <p>Over the course of 2 days, you'll have access to mentors from the Kerala Startup Mission and technical leaders, as well as resources to bring your vision to life for the Kottarakkara municipality.</p>
             </div>
           </div>
 
@@ -123,17 +119,13 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
           <div className="mt-8 p-8 sm:p-10 rounded-[2.5rem] bg-surface-dark border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-[0_30px_60px_-10px_rgba(0,0,0,0.5)]">
             <div className="space-y-2">
               <h4 className="text-white text-2xl font-black font-display uppercase tracking-tight leading-none">Still have questions?</h4>
-              <p className="text-text-muted text-sm font-medium">Join our community server or email support.</p>
+              <p className="text-text-muted text-sm font-medium">Email our support team.</p>
             </div>
             <div className="flex flex-wrap gap-4 w-full md:w-auto">
-              <button className="flex-1 md:flex-none flex items-center justify-center gap-2 text-sm font-black uppercase tracking-widest text-white hover:text-primary transition-colors px-6 h-12 rounded-xl border border-white/10 hover:bg-white/5">
+              <a href="mailto:support@impacthack.com" className="flex-1 md:flex-none flex items-center justify-center gap-2 text-sm font-black uppercase tracking-widest text-white hover:text-primary transition-colors px-6 h-12 rounded-xl border border-white/10 hover:bg-white/5">
                 <span className="material-symbols-outlined text-xl">mail</span>
-                Email
-              </button>
-              <button className="flex-1 md:flex-none flex items-center justify-center gap-2 text-sm font-black uppercase tracking-widest text-black bg-primary px-6 h-12 rounded-xl hover:bg-[#d9ff33] transition-all shadow-lg shadow-primary/20">
-                <span className="material-symbols-outlined text-xl">chat</span>
-                Discord
-              </button>
+                Email Support
+              </a>
             </div>
           </div>
         </div>
