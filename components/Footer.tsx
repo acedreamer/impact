@@ -34,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <p className="text-sm text-text-muted text-center max-w-md">
-          © 2024 Impact Hackathon. Powered by <span className="text-primary font-bold">K-DISC</span>. <br />Organized by <span className="text-white font-bold">μLearn CEK</span>.
+          © 2026 Impact Hackathon. Powered by <span className="text-primary font-bold">K-DISC</span>. <br />Organized by <span className="text-white font-bold">μLearn CEK</span>.
         </p>
       </div>
     </footer>

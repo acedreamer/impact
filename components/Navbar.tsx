@@ -142,20 +142,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               ))}
             </div>
 
-            {/* Bottom Section - Registration & Branding */}
+            {/* Bottom Section - Branding */}
             <div className="mt-auto pt-10 pb-8">
-              <div className="p-6 rounded-3xl bg-[#0a0a0a] border border-white/5 flex flex-col gap-6">
-                <div className="space-y-2">
-                  <p className="text-white font-black text-xl uppercase tracking-tight">Ready to Code?</p>
-                  <p className="text-text-muted text-sm leading-snug">Applications for San Francisco 2024 are currently open. Join the sprint.</p>
-                </div>
-                <button
-                  onClick={() => handleNavigate({ label: 'Register', value: 'register' })}
-                  className="h-14 w-full flex items-center justify-center rounded-2xl bg-primary text-black font-black text-base uppercase tracking-tight hover:bg-[#d9ff33] active:scale-95 transition-all shadow-xl shadow-primary/10"
-                >
-                  Register Now
-                </button>
-              </div>
 
               <div className="flex items-center justify-between mt-10 pt-6 border-t border-white/5">
                 <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] font-mono">Impact • Kottarakkara</span>
